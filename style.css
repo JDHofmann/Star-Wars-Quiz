@@ -9,14 +9,24 @@ header {
 }
 
 .logo img {
-  width: 200px;
-  height: 100px;
+  width: 250px;
+  height: auto;
+}
+.test-tracker {
+  text-align: center;
+  padding: 5%;
+  font-size: 18px;
+  text-transform: uppercase;
+}
+.test-tracker li{
+  display: inline;
+  padding: 0 10px;
 }
 .Questions-Answers {
   display: block;
   text-align: center;
   width: 100%;
-  padding: 10%;
+  padding: 1% 10%;
 }
 .Question {
   line-height: 22px;
