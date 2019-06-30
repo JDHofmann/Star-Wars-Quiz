@@ -1,8 +1,12 @@
 * {
   box-sizing: border-box;
+
+}
+body {
+  font-family: 'Muli', sans-serif;
 }
 header {
-  padding-top: 4em;
+  padding-top: 10%;
 }
 .logo {
   text-align: center;
@@ -14,8 +18,8 @@ header {
 }
 .test-tracker {
   text-align: center;
-  padding: 5%;
-  font-size: 18px;
+  padding: 8vh;
+  font-size: 3vh;
   text-transform: uppercase;
 }
 .test-tracker li{
@@ -28,20 +32,37 @@ header {
   width: 100%;
   padding: 1% 10%;
 }
-.Question {
-  line-height: 22px;
+.Question-Answer {
+  font-size: 3vh;
+  line-height: 4vh;
   text-transform: uppercase;
+  margin-bottom: 2vh;
 }
-.answer-option {
+.Question {
+  font-size: 3vh;
+  line-height: 4vh;
+  text-transform: uppercase;
+  margin-bottom: 2vh;
+}
+label {
   width: 100%;
-  padding: 2.5% 0;
+  padding: 2.5% 0 2.5% 1%;
   margin: 2.5% 0;
   display: flex;
   text-transform: uppercase;
   cursor: pointer;
   transition: all 0.5s ease-out;
-  line-height: 22px;
+  font-size: 3vh;
   border: 1px solid #111;
+}
+.correct {
+  background-color: green;
+}
+.not-correct {
+  opacity: .3;
+}
+.incorrect {
+  background-color: red;
 }
 .answer-option input {
   flex: 0 0 auto;
@@ -49,13 +70,16 @@ header {
     flex-shrink: 0;
     flex-basis: auto;
 }
-.answer-option span {
-  padding: 5px;
+label span {
+  padding: 0 2vw;
 }
 .submit-button {
+  padding: 0 0 0 10vw;
   width: 100%;
   padding: 2.5% 0;
-  line-height: 22px;
+  background-color: orange;
+  font-family: 'Muli', sans-serif;
+  line-height: 3vh;
   text-transform: uppercase;
   font-size: 1em;
 }
