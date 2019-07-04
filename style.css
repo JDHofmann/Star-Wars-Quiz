@@ -38,11 +38,14 @@ header {
   text-transform: uppercase;
   margin-bottom: 2vh;
 }
-.Question, .shouldWeStart, .correctOrIncorrect {
+.Question, .shouldWeStart, .correctOrIncorrect, .trivia{
   font-size: 3vh;
   line-height: 4vh;
   text-transform: uppercase;
   margin-bottom: 2vh;
+}
+.trivia {
+  display: none;
 }
 .Question {
   display: none;

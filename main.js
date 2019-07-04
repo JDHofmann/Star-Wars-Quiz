@@ -11,6 +11,13 @@ function generateQuestion(){
 let questionNumber = 0;
 let currentScore = 0;
 
+function updateScore() {
+  currentScore ++;
+  $('.test-tracker').html(`
+    <li>Question: ${questionNumber}/10</li><li>Score: ${currentScore}</li>`);
+    console.log(currentScore);
+}
+
 function startQuiz() {
   $('.Questions-Answers').on('click', '.start-quiz', function(event){
     event.preventDefault();
@@ -24,7 +31,7 @@ function startQuiz() {
   }
   );
 }
-
+// turn into a if else loop
 function createQuestion() {
   $('.Question').css('display', 'block');
   $('form').css('display', 'block');
@@ -56,14 +63,41 @@ function createQuestion() {
 
 
 // target form on click of submit button
+let answerSelected = '';
  $('form').on('click', '.submit-button', function(event) {
    event.preventDefault();
-   checkAnswer();
-   selectedAnswer();
+    answerSelected = $( "input:checked" ).val();
+   $('.Question').css('display', 'none');
+   //if (answerSelected !=== ''){
+     checkAnswer();
+     selectedAnswer();
+     triviaDisplay();
+   //}
+  //  else {
+  //    alert('try again');
+  //  }
  })
+
+function triviaDisplay() {
+  $('.trivia').text(STORE[0].trivia);
+  $('.trivia').css('display', 'block');
+}
+let currentAnswerCorrectOrIncorrect = '';
 
 function checkAnswer() {
   // check to see is value of answer === STORE[0].correctAnswer
+  $('.correctOrIncorrect').css('display', 'block');
+  if ( answerSelected === STORE[0].correctAnswer){
+    currentAnswerCorrectOrIncorrect = 'correct';
+    $('.correctOrIncorrect').css('color', 'green');
+    updateScore();
+  }
+  else {
+    currentAnswerCorrectOrIncorrect = 'incorrect';
+    $('.correctOrIncorrect').css('color', 'red');
+  }
+  $('.correctOrIncorrect').text(currentAnswerCorrectOrIncorrect);
+  
 }
 
 function selectedAnswer() {
