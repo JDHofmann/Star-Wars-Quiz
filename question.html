@@ -15,28 +15,37 @@
         <img src="img/Starwarslogo.png" alt="Star Wars Logo">
       </div>
       <ul class="test-tracker">
-
+        <li>Question: 1/10</li>
+        <li>Score: 0</li>
       </ul>
     </header>
     <main>
       <div class="Questions-Answers">
-        <h2 class="shouldWeStart">Are you ready to test<br> your Star Wars knowledge?</h2>
-        <h2 class="Question"></h2>
-        <h3 class="correctOrIncorrect"></h3>
+        <h2 class="Question">Who are the only two characters who appear in every Star Wars movie?</h2>
         <form class="" action="index.html" method="submit">
           <fieldset>
-
+            <label class="answer-option">
+              <input type="radio" name="answer" value="C-3PO and R2-D2">
+            <span>C-3PO and R2-D2</span>
+            </label>
+            <label class="answer-option">
+              <input type="radio" name="answer" value="Darth Vader and Emperor Palpatine">
+              <span>Darth Vader and Emperor Palpatine</span>
+            </label>
+            <label class="answer-option">
+              <input type="radio" name="answer" value="Han and Chewbacca">
+              <span>Han and Chewbacca</span>
+            </label>
+            <label class="answer-option">
+              <input type="radio" name="answer" value="answer 4">
+              <span>answer 4</span>
+            </label>
             <button type="submit" class="submit-button" name="button">Submit</button>
-
           </fieldset>
         </form>
-        <button type="submit" class="start-quiz" name="button">Start the Quiz</button>
-        <button type="button" class="nextQuestion">next question</button>
-
       </div>
     </main>
   </body>
   <script src="jQuery v3.4.1.js"></script>
-  <script src="store.js"></script>
   <script src="main.js"></script>
 </html>

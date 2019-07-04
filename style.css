@@ -13,7 +13,7 @@ header {
 }
 
 .logo img {
-  width: 250px;
+  width: 35vh;
   height: auto;
 }
 .test-tracker {
@@ -38,11 +38,20 @@ header {
   text-transform: uppercase;
   margin-bottom: 2vh;
 }
-.Question {
+.Question, .shouldWeStart, .correctOrIncorrect {
   font-size: 3vh;
   line-height: 4vh;
   text-transform: uppercase;
   margin-bottom: 2vh;
+}
+.Question {
+  display: none;
+}
+.correctOrIncorrect {
+  display: none;
+}
+form {
+  display: none;
 }
 label {
   width: 100%;
@@ -73,7 +82,7 @@ label {
 label span {
   padding: 0 2vw;
 }
-.submit-button {
+.submit-button, .start-quiz, .nextQuestion{
   padding: 0 0 0 10vw;
   width: 100%;
   padding: 2.5% 0;
@@ -82,4 +91,7 @@ label span {
   line-height: 3vh;
   text-transform: uppercase;
   font-size: 1em;
+}
+.nextQuestion {
+  display: none;
 }
