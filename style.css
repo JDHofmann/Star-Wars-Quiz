@@ -4,15 +4,15 @@
 
 }
 body {
+  transition: all 0.5s ease-out;
   font-family: 'Muli', sans-serif;
   background-image: url(img/tatooine.jpg);
   background-repeat: no-repeat;
-
   background-position: center right;
 
 }
 header {
-  padding-top: 10%;
+  padding: 5% 0 3% 0;
 }
 .logo {
   text-align: center;
@@ -28,40 +28,41 @@ header {
   font-size: 3vh;
   text-transform: uppercase;
   color: #fff;
-  display: inline;
+  text-shadow: 0 0 5px #111;
+  display: none;
   width: 50%;
+  transition: all 0.5s ease-out;
 }
 .test-tracker li{
-  
   text-align: center;
   padding: 0 10px 2vh;
-}
-.test-tracker li span {
-  margin-bottom: 2vh;
-  background-color: #111;
-  display: inline;
 }
 .Questions-Answers {
   display: block;
   text-align: center;
   width: 100%;
   padding: 1% 10%;
+  transition: all 0.5s ease-out;
 }
 .Question-Answer {
   font-size: 3vh;
   line-height: 4vh;
   text-transform: uppercase;
   margin-bottom: 2vh;
+  transition: all 0.5s ease-out;
 }
-.Question, .shouldWeStart, .correctOrIncorrect, .trivia, .correctedAnswer {
+.Question, .shouldWeStart, .correctOrIncorrect, .trivia, .correctedAnswer, .final-score{
   font-size: 3vh;
   line-height: 4vh;
   text-transform: uppercase;
   margin-bottom: 2vh;
   color: #fff;
+  text-shadow: 0 0 5px #111;
+  transition: all 0.5s ease-out;
 }
 .trivia {
   display: none;
+  transition: all 0.5s ease-out;
 }
 .Question {
   display: none;
@@ -69,8 +70,14 @@ header {
 .correctOrIncorrect {
   display: none;
 }
+.final-score-display {
+  font-size: 6vh;
+  line-height: 10vh;
+  padding: 2vh;
+}
 form {
   display: none;
+  transition: all 0.5s ease-out;
 }
 label {
   width: 100%;
@@ -82,6 +89,11 @@ label {
   transition: all 0.5s ease-out;
   font-size: 3vh;
   border: 1px solid #111;
+  text-shadow: 0 0 4px #fff;
+
+}
+label:hover {
+  filter: saturate(130%) brightness(123%);
 }
 .a {
   background-color: #D2C8C8;
@@ -107,6 +119,7 @@ label {
 }
 .incorrect {
   background-color: red;
+  text-shadow: 0 0 3px #fff;
 }
 .answer-option input {
   flex: 0 0 auto;
@@ -117,19 +130,26 @@ label {
 label span {
   padding: 0 2vw;
 }
-.submit-button, .start-quiz, .nextQuestion{
+.submit-button, .start-quiz, .nextQuestion, .restart-quiz{
   padding: 0 0 0 10vw;
   width: 100%;
   padding: 2.5% 0;
-  background-color: #FFD38A;
+  background-color: #ffcd7a;
   font-family: 'Muli', sans-serif;
   line-height: 3vh;
   text-transform: uppercase;
   font-size: 1em;
+  text-shadow: 0 0 3px #fff;
+  border: 1px solid #111;
+  transition: all 0.5s ease-out;
+
+}
+.submit-button:hover, .start-quiz:hover, .nextQuestion:hover, .restart-quiz:hover {
+  background-color: #80E2AD;
 }
 .nextQuestion {
   display: none;
 }
-.start-quiz{
+.start-quiz,.restart-quiz{
   margin-top: 10%;
 }
