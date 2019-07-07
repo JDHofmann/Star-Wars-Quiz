@@ -20,7 +20,7 @@ function startQuiz() {
     // remove 'should we start' text
     $('.shouldWeStart').css('display', 'none');
     //renderTestTracker();
-    $('.test-tracker').css('display', 'inline');
+    $('.test-tracker').css('display', 'block');
     // begin question number display at 1
     $('.question-number').text('1');
     // display test tracker
