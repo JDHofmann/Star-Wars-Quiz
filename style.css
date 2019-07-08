@@ -28,7 +28,7 @@ header {
 .test-tracker {
   text-align: center;
   padding: 8vh;
-  font-size: .75em;
+  font-size: .85em;
   text-transform: uppercase;
   color: #fff;
   text-shadow: 0 0 5px #111;
@@ -57,7 +57,7 @@ header {
   transition: all 0.5s ease-out;
 }
 .Question, .shouldWeStart, .correctOrIncorrect, .trivia, .correctedAnswer, .final-score{
-  font-size: 1.5em;
+  font-size: 1.25em;
   /* font-size: 3vh;
   line-height: 4vh; */
   text-transform: uppercase;
@@ -88,7 +88,7 @@ label {
   text-transform: uppercase;
   cursor: pointer;
   transition: all 0.5s ease-out;
-  font-size: .7em;
+  font-size: 1em;
   /* font-size: 3vh; */
   border: 1px solid #111;
   text-shadow: 0 0 4px #fff;
@@ -139,7 +139,7 @@ label span {
   font-family: 'Muli', sans-serif;
   /* line-height: 3vh; */
   text-transform: uppercase;
-  font-size: .9em;
+  font-size: 1em;
   text-shadow: 0 0 3px #fff;
   border: 1px solid #111;
   transition: all 0.4s ease-out;
@@ -169,7 +169,7 @@ label span {
 /* for larger screens */
 @media only screen and (min-width: 992px) {
   label, .submit-button, .start-quiz, .nextQuestion, .restart-quiz, .shouldWeStart, .test-tracker, .Question, .correctOrIncorrect, .trivia, .correctedAnswer, .final-score {
-    font-size: 2.75em;
+    font-size: 1.5em;
   }
 
 }
@@ -181,5 +181,8 @@ label span {
 @media only screen and (min-width: 1315px) {
   body {
   background-size: cover;
+  }
+  label, .submit-button, .start-quiz, .nextQuestion, .restart-quiz, .shouldWeStart, .test-tracker, .Question, .correctOrIncorrect, .trivia, .correctedAnswer, .final-score {
+    font-size: 2em;
   }
 }
