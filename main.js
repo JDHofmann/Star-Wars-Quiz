@@ -1,13 +1,4 @@
-// ** label class could be blank for question format, and toggled correct and incorrect for answer page.
 
-// ** prompt after question can be the same for either correct or incorrect, with the exception of CORRECT or INCORRECT at the top
-
-// this function will run when the "start the quiz" btn is clicked via $('.submit-button').on('click', function(){})
-/*
-function generateQuestion(){
-  console.log("`generateQuestion` ran");
-}
-*/
 let questionNumber = 0;
 let currentScore = 0;
 
@@ -73,7 +64,6 @@ function questionGenerator() {
   }
     else {
       endOfGame();
-
     }
   console.log('`questionGenerator` just ran');
 }
@@ -103,29 +93,22 @@ function submitAnswer() {
   $('form').on('click', '.submit-button', function(event) {
     event.preventDefault();
     // create variable for checked answer
-     answerSelected = $( "input:checked" ).val();
-
+    answerSelected = $( "input:checked" ).val();
       // toggleClass for form-button to nextQuestion
-      $('form button').removeClass('submit-button');
-      $('form button').addClass('nextQuestion');
-      $('form button').text('next question');
-
-       // remove question div
-      $('.Question').css('display', 'none');
-      //$('.submit-button').css('display', 'none');
-        checkAnswer();
-        selectedAnswer();
-        triviaDisplay();
-
-
-
-      console.log('`submitAnswer` just ran');
+    $('form button').removeClass('submit-button');
+    $('form button').addClass('nextQuestion');
+    $('form button').text('next question');
+     // remove question div
+    $('.Question').css('display', 'none');
+    //$('.submit-button').css('display', 'none');
+      checkAnswer();
+      selectedAnswer();
+      triviaDisplay();
+    console.log('`submitAnswer` just ran');
   })
 }
 
 // when user clicks to submit answer
-
-
 function triviaDisplay() {
   $('.trivia').text(STORE[questionNumber].trivia);
   $('.trivia').css('display', 'block');
@@ -210,28 +193,3 @@ function createQuiz() {
   // createNextQuestion();
 }
 $(createQuiz);
-
-
-
-// render the page
-
-// go to question 1 when clicked
-
-// display which question Number and Score
-// Change submit button text to Submit
-// input questions and answers in H2 and labels for each question
-
-// when submit button clicked:
-// opacity .3 for answers not selected
-// highlight green correct answer
-// display correct or incorrect
-// show additional trivia along with question
-// change submit button text to Next question
-
-// ** repeat until 10/10 questions answered
-
-// display final Score and if the user is a Jedi master or not
-// change submit button text to Play Again
-
-// add hover features for each answer
-// invert submit button color for hover
