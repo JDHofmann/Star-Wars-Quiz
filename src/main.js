@@ -36,14 +36,15 @@ function questionGenerator() {
   if ( questionNumber < STORE.length){
     // render the score
     renderScore();
-    // display question div
-    $('.Question').css('display', 'block');
     // display form
     $('form').css('display', 'block');
+    // display question div
+    $('.Question').css('display', 'block');
+
     // add question from store into question div
     $('.Question').text(`${STORE[questionNumber].question}`);
     // add answers for store into form
-    $('form').html(`<fieldset>
+    $('fieldset').html(`
       <label class="answer-option a">
         <input type="radio" name="answer" value="${STORE[questionNumber].answers[0]}" checked>
       <span>${STORE[questionNumber].answers[0]}</span>
@@ -61,7 +62,7 @@ function questionGenerator() {
       <span>${STORE[questionNumber].answers[3]}</span>
       </label>
       <button type="submit" class="submit-button" name="button">Submit</button>
-    </fieldset>`);
+    `);
   }
     else {
       endOfGame();
