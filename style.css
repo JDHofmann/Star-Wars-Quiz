@@ -11,11 +11,9 @@ body {
   min-width: 100%;
   min-height: 100vh;
   height: 100vh;
-
-
 }
 header {
-  padding: 5% 0 3% 0;
+  padding: 2% 0 1% 0;
 }
 .logo {
   text-align: center;
@@ -27,7 +25,7 @@ header {
 }
 .test-tracker {
   text-align: center;
-  padding: 8vh;
+  padding: 3vh 0 2vh 0;
   font-size: .85em;
   text-transform: uppercase;
   color: #fff;
@@ -39,14 +37,20 @@ header {
 }
 .test-tracker li{
 
-  padding: 0 10px 2vh;
+  padding: 0 10px 1.5vh;
   display: inline-block;
+}
+.correctOrIncorrect {
+  text-align: center;
+  text-transform: uppercase;
+  font-size: 1em;
+  transition: all 0.5s ease-out;
 }
 .Questions-Answers {
   display: block;
   text-align: center;
   width: 100%;
-  padding: 1% 10%;
+  padding: 0 10% 1%;
   transition: all 0.5s ease-out;
 }
 .Question-Answer {
@@ -56,18 +60,16 @@ header {
   margin-bottom: 2vh;
   transition: all 0.5s ease-out;
 }
-.Question, .shouldWeStart, .correctOrIncorrect, .trivia, .correctedAnswer, .final-score{
-  font-size: 1.25em;
-  /* font-size: 3vh;
-  line-height: 4vh; */
+.Question, .shouldWeStart, .trivia, .correctedAnswer, .final-score{
+  font-size: 1em;
   text-transform: uppercase;
-  margin-bottom: 2vh;
+  margin-bottom: 1.5vh;
   color: #fff;
   text-shadow: 0 0 5px #111;
   transition: all 0.5s ease-out;
 }
 .shouldWeStart, .final-score{
-  margin-top: 3vh;
+  /* margin-top: 3vh; */
 }
 .trivia {
   font-size: .75em;
@@ -82,8 +84,8 @@ header {
 }
 label {
   width: 100%;
-  padding: 2.5% 0 2.5% 1%;
-  margin: 2.5% 0;
+  padding: 2% 0 2% 1%;
+  margin: 1% 0;
   display: flex;
   text-transform: uppercase;
   cursor: pointer;
@@ -134,10 +136,9 @@ label span {
 .submit-button, .start-quiz, .nextQuestion, .restart-quiz{
   padding: 0 0 0 10vw;
   width: 100%;
-  padding: 2.5% 0;
+  padding: 1.5% 0;
   background-color: #ffcd7a;
   font-family: 'Muli', sans-serif;
-  /* line-height: 3vh; */
   text-transform: uppercase;
   font-size: 1em;
   text-shadow: 0 0 3px #fff;
@@ -169,7 +170,7 @@ label span {
 /* for larger screens */
 @media only screen and (min-width: 992px) {
   label, .submit-button, .start-quiz, .nextQuestion, .restart-quiz, .shouldWeStart, .test-tracker, .Question, .correctOrIncorrect, .trivia, .correctedAnswer, .final-score {
-    font-size: 1.5em;
+    font-size: 1.25em;
   }
 
 }
@@ -183,6 +184,6 @@ label span {
   background-size: cover;
   }
   label, .submit-button, .start-quiz, .nextQuestion, .restart-quiz, .shouldWeStart, .test-tracker, .Question, .correctOrIncorrect, .trivia, .correctedAnswer, .final-score {
-    font-size: 2em;
+    font-size: 1.5em;
   }
 }

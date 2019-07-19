@@ -35,14 +35,15 @@ function questionGenerator() {
   if ( questionNumber < STORE.length){
     // render the score
     renderScore();
-    // display question div
-    $('.Question').css('display', 'block');
     // display form
     $('form').css('display', 'block');
+    // display question div
+    $('.Question').css('display', 'block');
+
     // add question from store into question div
     $('.Question').text(`${STORE[questionNumber].question}`);
     // add answers for store into form
-    $('form').html(`<fieldset>
+    $('fieldset').html(`
       <label class="answer-option a">
         <input type="radio" name="answer" value="${STORE[questionNumber].answers[0]}" checked>
       <span>${STORE[questionNumber].answers[0]}</span>
@@ -60,7 +61,7 @@ function questionGenerator() {
       <span>${STORE[questionNumber].answers[3]}</span>
       </label>
       <button type="submit" class="submit-button" name="button">Submit</button>
-    </fieldset>`);
+    `);
   }
     else {
       endOfGame();
@@ -181,8 +182,22 @@ function endOfGame() {
   }
 }
 function reloadGame() {
+  // this function isn't working!!!!
   $('.restart-quiz').on('click', function(){
-    location.reload();
+    // event.preventDefault();
+    questionNumber = 0;
+    currentScore = 0;
+    // remove start button
+    $('.final-score').css('display', 'none');
+    // remove 'should we start' text
+    $('.test-tracker').css('display', 'block');
+    // begin question number display at 1
+    $('.question-number').text('1');
+    // display test tracker
+    alert ('reboot');
+    console.log('`reload game` ran')
+    // run question generator
+    questionGenerator();
   })
 }
 function createQuiz() {
@@ -193,3 +208,13 @@ function createQuiz() {
   // createNextQuestion();
 }
 $(createQuiz);
+/*
+Here are a few ways that I think this quiz can improve in order to make it an even stronger portfolio piece:
+
+
+While not directly related to your code, you need a README for this (and every other) project you work on. It's a best practice and an industry standard. Employers won’t look at a project as fully complete or polished if it is missing aREADME. Content for the README can include things like the reason behind the app, technologies used, screen shots of the app, challenges encountered and overcome throughout the development process, etc.
+
+Finally, I noticed that you are using a full window reload to take the user back to the start of the quiz, and while this technically works, it's not necessarily the best way it could be done. Refreshes are an expensive operation, especially in larger applications where you may have to make several database calls in order to grab the data you need and render it to the browser again.
+
+Reloads can also hinder the overall user experience, as your users have to wait a few seconds for everything to finish rendering. Instead, you can perform the operations through DOM manipulation, which will give you a chance to show off more of your jQuery skills, as well as create a smoother user flow.
+*/
