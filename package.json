@@ -1,0 +1,25 @@
+{
+  "name": "star-wars-quiz",
+  "version": "1.0.0",
+  "description": "",
+  "main": "src/main.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jaroot32/Star-Wars-Quiz.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jaroot32/Star-Wars-Quiz/issues"
+  },
+  "homepage": "https://github.com/jaroot32/Star-Wars-Quiz#readme",
+  "dependencies": {},
+  "devDependencies": {
+    "jquery": "^3.4.1",
+    "webpack": "^4.35.3",
+    "webpack-cli": "^3.3.5"
+  }
+}
