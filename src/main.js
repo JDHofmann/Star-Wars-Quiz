@@ -1,4 +1,5 @@
-let $ = require('jquery');
+// causing error 180803
+//let $ = require('jquery');
 
 let questionNumber = 0;
 let currentScore = 0;
