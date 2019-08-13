@@ -12,7 +12,7 @@ STORE = [
     answers: [
       "A New Hope", "Return of the Jedi", "Empire Strikes Back", "Attack of the Clones"
     ],
-    correctAnswer: "Return of the Jedi",
+    correctAnswer: "Empire Strikes Back",
     trivia: 'Darth Vader never actually says “Luke, I am your father.” He actually says, “No, I am your father.”'
   },
   {
@@ -25,7 +25,7 @@ STORE = [
   {
     question: "Who built C-3PO?",
     answers: [
-      "Obi One Kenobi", "Rey", "Luke Skywalker", "Anakin Skywalker"
+      "Obi Wan Kenobi", "Rey", "Luke Skywalker", "Anakin Skywalker"
     ],
     correctAnswer: "Anakin Skywalker",
     trivia: "When we first meet a young Anakin Skywalker on Tatooine, he excitedly shows off an unfinished droid, he calls '3PO' to Padme."
@@ -57,7 +57,7 @@ STORE = [
       "Tatooine", "Hoth", "Jakku", "Naboo"
     ],
     correctAnswer: "Tatooine",
-    trivia: "Obi One Kenobi ironically hid Luke on Tatooine, Anakin's home planet, to keep him safe from Darth Vader."
+    trivia: "Obi Wan Kenobi ironically hid Luke on Tatooine, Anakin's home planet, to keep him safe from Darth Vader."
   },
   {
     question: "What position does Padmé Amidala hold following her term as Queen of Naboo?",
@@ -70,9 +70,9 @@ STORE = [
   {
     question: "Who is Princess Leia’s only hope?",
     answers: [
-      "Luke Skywalker", "Obi One Kenobi", "R2 D2", "Han Solo"
+      "Luke Skywalker", "Obi Wan Kenobi", "R2 D2", "Han Solo"
     ],
-    correctAnswer: "Obi One Kenobi",
+    correctAnswer: "Obi Wan Kenobi",
     trivia: "As one of the few remaining Jedi, and the watcher of Luke, Leia was always told her to contact Obi One on Tatooine, if her troubles ever became desperate."
   }
 
