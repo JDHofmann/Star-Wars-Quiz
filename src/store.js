@@ -35,7 +35,7 @@ STORE = [
     answers: [
       "Darth Sidious", "Anakin Skywalker", "Jango Fett", "Darth Maul"],
     correctAnswer: "Darth Maul",
-    trivia: "Darth Maul kills Qui-Gon Jinn while Obi One Kenobi is trapped behind a forcefield and unable to help."
+    trivia: "Darth Maul kills Qui-Gon Jinn while Obi Wan Kenobi is trapped behind a forcefield and unable to help."
   },
   {
     question: "Who inherits Han Solo’s ship?",
