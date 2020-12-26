@@ -1,5 +1,3 @@
-// causing error 180803
-//let $ = require('jquery');
 
 let questionNumber = 0;
 let currentScore = 0;
@@ -18,7 +16,7 @@ function startQuiz() {
     $('.question-number').text('1');
     // display test tracker
 
-    console.log('`startQuiz` ran')
+    // console.log('`startQuiz` ran')
     // run question generator
     questionGenerator();
   });
@@ -40,12 +38,13 @@ function questionGenerator() {
     // display form
     $('form').css('display', 'block');
     // display question div
-    $('.Question').css('display', 'block');
+    // $('.Question').css('display', 'block');
 
     // add question from store into question div
-    $('.Question').text(`${STORE[questionNumber].question}`);
+    // $('.Question').text(`${STORE[questionNumber].question}`);
     // add answers for store into form
     $('fieldset').html(`
+      <legend class="Question">${STORE[questionNumber].question}</legend>
       <label class="answer-option a">
         <input type="radio" name="answer" value="${STORE[questionNumber].answers[0]}" checked>
       <span>${STORE[questionNumber].answers[0]}</span>
@@ -68,7 +67,7 @@ function questionGenerator() {
     else {
       endOfGame();
     }
-  console.log('`questionGenerator` just ran');
+  // console.log('`questionGenerator` just ran');
 }
 
 function changeQuestionNumber() {
@@ -76,7 +75,7 @@ function changeQuestionNumber() {
   questionNumber ++;
   // push questionNumber to test-tracker
   $('.question-number').text(questionNumber+1);
-  console.log(`we are now displaying question number ${questionNumber}`);
+  // console.log(`we are now displaying question number ${questionNumber}`);
 }
 
 function updateScore() {
@@ -86,7 +85,7 @@ function updateScore() {
 function renderScore() {
   // render currentScore to test-tracker
   $('.score').text(currentScore);
-  console.log(`Your current score is ${currentScore}`);
+  // console.log(`Your current score is ${currentScore}`);
 }
 
 let answerSelected = '';
@@ -107,7 +106,7 @@ function submitAnswer() {
       checkAnswer();
       selectedAnswer();
       triviaDisplay();
-    console.log('`submitAnswer` just ran');
+    // console.log('`submitAnswer` just ran');
   })
 }
 
@@ -136,15 +135,15 @@ function checkAnswer() {
     $('.correctOrIncorrect').css('text-shadow', '0 0 4px #fff');
   }
   $('.correctOrIncorrect').text(currentAnswerCorrectOrIncorrect);
-  console.log('`checkAnswer` just ran');
+  // console.log('`checkAnswer` just ran');
 }
 
 function selectedAnswer() {
-  console.log('`selectedAnswer` ran');
   //$('.submit-button').css('display', 'none');
   $('.nextQuestion').css('display', 'block');
   renderSolution();
   createNextQuestion();
+  // console.log('`selectedAnswer` ran');
 }
 
 function renderSolution() {
@@ -153,7 +152,7 @@ function renderSolution() {
   $(selectedAnswerLabel).addClass('selected');
   $('.answer-option').css('opacity', '.3');
   renderScore();
-  console.log('`renderSolution` just ran');
+  // console.log('`renderSolution` just ran');
 }
 
 function createNextQuestion() {
@@ -163,18 +162,17 @@ function createNextQuestion() {
     $('form button').removeClass('nextQuestion');
     $('form button').addClass('submit-button');
     $('form button').text('submit');
-    console.log('`createNextQuestion` is running');
     $('.nextQuestion').css('display', 'none');
     changeQuestionNumber();
     questionGenerator();
+    // console.log('`createNextQuestion` is running');
   });
 }
 function endOfGame() {
-  console.log('`endOfGame` ran');
   reloadGame();
   $('.question-number').text(questionNumber);
   $('form').html(`<fieldset>
-    <button type="submit" class="restart-quiz" name="button">Restart the Quiz</button>
+  <button type="submit" class="restart-quiz" name="button">Restart the Quiz</button>
   </fieldset>`);
   if( currentScore > 7){
     $('.final-score').html(`<span>Congratulations!<br>Your Final Score is <br><span class="final-score-display"> ${currentScore}</span><br>You are truly a Jedi Master!</span>`)
@@ -182,6 +180,7 @@ function endOfGame() {
   else {
     $('.final-score').html(`<span>Maybe You should watch the movies again<br>Your Final Score is<br><span class="final-score-display"> ${currentScore}</span><br>Better luck next time. <br>Click below to play again</span>`)
   }
+  // console.log('`endOfGame` ran');
 }
 function reloadGame() {
   // this function isn't working!!!!
@@ -197,9 +196,9 @@ function reloadGame() {
     $('.question-number').text('1');
     // display test tracker
     alert ('reboot');
-    console.log('`reload game` ran')
     // run question generator
     questionGenerator();
+    // console.log('`reload game` ran')
   })
 }
 function createQuiz() {
@@ -210,13 +209,3 @@ function createQuiz() {
   // createNextQuestion();
 }
 $(createQuiz);
-/*
-Here are a few ways that I think this quiz can improve in order to make it an even stronger portfolio piece:
-
-
-While not directly related to your code, you need a README for this (and every other) project you work on. It's a best practice and an industry standard. Employers won’t look at a project as fully complete or polished if it is missing aREADME. Content for the README can include things like the reason behind the app, technologies used, screen shots of the app, challenges encountered and overcome throughout the development process, etc.
-
-Finally, I noticed that you are using a full window reload to take the user back to the start of the quiz, and while this technically works, it's not necessarily the best way it could be done. Refreshes are an expensive operation, especially in larger applications where you may have to make several database calls in order to grab the data you need and render it to the browser again.
-
-Reloads can also hinder the overall user experience, as your users have to wait a few seconds for everything to finish rendering. Instead, you can perform the operations through DOM manipulation, which will give you a chance to show off more of your jQuery skills, as well as create a smoother user flow.
-*/

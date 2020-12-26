@@ -11,46 +11,55 @@ body {
   min-width: 100%;
   min-height: 100vh;
   height: 100vh;
+  border-radius: 5px;
 }
 header {
-  padding: 2% 0 1% 0;
+  padding: 5% 0 1% 0;
 }
+
+main {
+  position: absolute;
+  top: 60%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 90%;
+}
+
 .logo {
   text-align: center;
 }
 
 .logo img {
-  width: 20vw;
+  width: 25vmin;
   height: auto;
 }
 .test-tracker {
   text-align: center;
   padding: 3vh 0 2vh 0;
-  font-size: .85em;
+  font-size: 1em;
   text-transform: uppercase;
-  color: #fff;
-  text-shadow: 0 0 5px #111;
+  /* color: #fff;
+  text-shadow: 0 0 5px #111; */
   display: none;
-
-
   transition: all 0.5s ease-out;
 }
-.test-tracker li{
 
+.test-tracker li{
   padding: 0 10px 1.5vh;
   display: inline-block;
 }
+
 .correctOrIncorrect {
   text-align: center;
   text-transform: uppercase;
-  font-size: 1em;
+  font-size: 1.2em;
   transition: all 0.5s ease-out;
 }
 .Questions-Answers {
   display: block;
   text-align: center;
   width: 100%;
-  padding: 0 10% 1%;
+  padding: 10% 10% 1%;
   transition: all 0.5s ease-out;
 }
 .Question-Answer {
@@ -60,21 +69,22 @@ header {
   margin-bottom: 2vh;
   transition: all 0.5s ease-out;
 }
+
+
 .Question, .shouldWeStart, .trivia, .correctedAnswer, .final-score{
-  font-size: 1em;
+  font-size: 1.1em;
   text-transform: uppercase;
   margin-bottom: 1.5vh;
-  color: #fff;
-  text-shadow: 0 0 5px #111;
+  /* color: #fff; */
+  /* text-shadow: 0 0 5px #111; */
   transition: all 0.5s ease-out;
 }
-.shouldWeStart, .final-score{
-  /* margin-top: 3vh; */
+
+.Question {
+  margin-bottom: 25px;
 }
-.trivia {
-  font-size: .75em;
-}
-.Question, .correctOrIncorrect, form, .trivia {
+
+.correctOrIncorrect, form, .trivia {
   display: none;
 }
 .final-score-display {
@@ -90,10 +100,11 @@ label {
   text-transform: uppercase;
   cursor: pointer;
   transition: all 0.5s ease-out;
-  font-size: 1em;
-  /* font-size: 3vh; */
+  font-size: 1.1em;
   border: 1px solid #111;
   text-shadow: 0 0 4px #fff;
+  border-radius: 5px;
+
 }
 label:hover {
   filter: saturate(130%) brightness(123%);
@@ -129,9 +140,12 @@ label:hover {
     flex-grow: 0;
     flex-shrink: 0;
     flex-basis: auto;
+
 }
 label span {
   padding: 0 2vw;
+  text-align: center;
+  width: 100%;
 }
 .submit-button, .start-quiz, .nextQuestion, .restart-quiz{
   padding: 0 0 0 10vw;
@@ -144,6 +158,7 @@ label span {
   text-shadow: 0 0 3px #fff;
   border: 1px solid #111;
   transition: all 0.4s ease-out;
+  border-radius: 5px;
 
 }
 .submit-button:hover, .start-quiz:hover, .nextQuestion:hover, .restart-quiz:hover {
@@ -155,22 +170,16 @@ label span {
 .start-quiz,.restart-quiz{
   margin-top: 10%;
 }
-/*
-@media only screen and (min-height: 920px){
-  body {
-    background-size: cover;
-  }
-}
-*/
+
 @media only screen and (min-width: 768px) {
   body {
     background-position: 0 0;
 
   }
-/* for larger screens */
+
 @media only screen and (min-width: 992px) {
   label, .submit-button, .start-quiz, .nextQuestion, .restart-quiz, .shouldWeStart, .test-tracker, .Question, .correctOrIncorrect, .trivia, .correctedAnswer, .final-score {
-    font-size: 1.25em;
+    font-size: 1.2em;
   }
 
 }
@@ -184,6 +193,6 @@ label span {
   background-size: cover;
   }
   label, .submit-button, .start-quiz, .nextQuestion, .restart-quiz, .shouldWeStart, .test-tracker, .Question, .correctOrIncorrect, .trivia, .correctedAnswer, .final-score {
-    font-size: 1.5em;
+    font-size: 1.35em;
   }
 }
