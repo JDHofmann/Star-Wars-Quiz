@@ -156,7 +156,6 @@ function renderSolution() {
 }
 
 function createNextQuestion() {
-  // $('.Questions-Answers').css('background-color', 'black');
   $('.nextQuestion').click(function(event){
     event.preventDefault();
     $('form button').removeClass('nextQuestion');
